@@ -1,0 +1,24 @@
+Lista zmian:
+- usunięcie zmiennej Name w ImportedObject,
+- skrócenie kodu w dwóch miejscach, połączenie if'ów,
+- zmiana znaku równośći w linice 53 for (int i = 0; i < ImportedObjects.Count(); i++),
+- zmiana                 var importedObject = new ImportedObject();
+                importedObject.Type = values[0];
+                importedObject.Name = values[1];
+                importedObject.Schema = values[2];
+                importedObject.ParentName = values[3];
+                importedObject.ParentType = values[4];
+                importedObject.DataType = values[5];
+                importedObject.IsNullable = values[6];
+				
+				na 
+				          var importedObject = new ImportedObject
+                {
+                    Type = values[0],
+                    Name = values[1],
+                    Schema = values[2],
+                    ParentName = values[3],
+                    ParentType = values[4],
+                    DataType = values[5],
+                    IsNullable = values[6]
+                };
